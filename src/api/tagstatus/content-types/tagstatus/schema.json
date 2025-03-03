@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tagstatuses",
+  "info": {
+    "singularName": "tagstatus",
+    "pluralName": "tagstatuses",
+    "displayName": "tagstatus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "shortform": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile.profile",
+      "inversedBy": "tagstatuses"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

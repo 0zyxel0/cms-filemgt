@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "permroles",
+  "info": {
+    "singularName": "permrole",
+    "pluralName": "permroles",
+    "displayName": "permrole",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "p_edit": {
+      "type": "boolean"
+    },
+    "p_upload": {
+      "type": "boolean"
+    },
+    "p_status": {
+      "type": "boolean"
+    },
+    "p_create": {
+      "type": "boolean"
+    },
+    "p_approve": {
+      "type": "boolean"
+    },
+    "p_pending": {
+      "type": "boolean"
+    },
+    "p_deny": {
+      "type": "boolean"
+    }
+  }
+}

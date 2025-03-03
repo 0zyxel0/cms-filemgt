@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "itemforms",
+  "info": {
+    "singularName": "itemform",
+    "pluralName": "itemforms",
+    "displayName": "itemform",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "itemstatus": {
+      "type": "string"
+    },
+    "fileref": {
+      "type": "string"
+    },
+    "itemreq": {
+      "type": "datetime"
+    },
+    "itemapp": {
+      "type": "datetime"
+    },
+    "profref": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

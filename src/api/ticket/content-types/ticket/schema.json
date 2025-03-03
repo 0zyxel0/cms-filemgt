@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "ticket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tid": {
+      "type": "string"
+    },
+    "mason": {
+      "type": "string"
+    },
+    "lodge": {
+      "type": "string"
+    },
+    "nextuser": {
+      "type": "string"
+    },
+    "tstatus": {
+      "type": "string"
+    },
+    "prevuser": {
+      "type": "string"
+    },
+    "initial_date": {
+      "type": "datetime"
+    },
+    "release_date": {
+      "type": "datetime"
+    },
+    "initial_media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "fileforms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fileform.fileform",
+      "mappedBy": "ticket"
+    },
+    "doctype": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string"
+    }
+  }
+}

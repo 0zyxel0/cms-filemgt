@@ -1,0 +1,33 @@
+{
+  "name": "cms-filemgt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.2.0",
+    "@strapi/plugin-users-permissions": "5.2.0",
+    "@strapi/provider-upload-local": "^5.10.3",
+    "@strapi/strapi": "5.2.0",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^6.29.0",
+    "styled-components": "^6.0.0",
+    "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "0c4ce0b1-8057-45f0-9f85-9b3081fe201e"
+  }
+}

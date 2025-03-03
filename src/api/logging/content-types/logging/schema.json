@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loggings",
+  "info": {
+    "singularName": "logging",
+    "pluralName": "loggings",
+    "displayName": "logging",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action": {
+      "type": "string"
+    },
+    "details": {
+      "type": "json"
+    },
+    "date_move": {
+      "type": "datetime"
+    },
+    "user": {
+      "type": "string"
+    },
+    "usertype": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string"
+    },
+    "fid": {
+      "type": "string"
+    },
+    "tid": {
+      "type": "string"
+    }
+  }
+}

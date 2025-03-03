@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fileforms",
+  "info": {
+    "singularName": "fileform",
+    "pluralName": "fileforms",
+    "displayName": "fileform",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "filestatus": {
+      "type": "string"
+    },
+    "update_date": {
+      "type": "datetime"
+    },
+    "tid": {
+      "type": "string"
+    },
+    "committee": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "ticket": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ticket.ticket",
+      "inversedBy": "fileforms"
+    },
+    "form_media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commentrems",
+  "info": {
+    "singularName": "commentrem",
+    "pluralName": "commentrems",
+    "displayName": "commentrem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "string"
+    },
+    "tid": {
+      "type": "string"
+    },
+    "did": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}

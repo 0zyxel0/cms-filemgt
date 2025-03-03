@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mediaforms",
+  "info": {
+    "singularName": "mediaform",
+    "pluralName": "mediaforms",
+    "displayName": "mediaform",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "imgmedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tid": {
+      "type": "string"
+    },
+    "puser": {
+      "type": "string"
+    },
+    "did": {
+      "type": "string"
+    }
+  }
+}

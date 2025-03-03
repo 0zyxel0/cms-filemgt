@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fname": {
+      "type": "string"
+    },
+    "mname": {
+      "type": "string"
+    },
+    "lname": {
+      "type": "string"
+    },
+    "profid": {
+      "type": "string"
+    },
+    "usertype": {
+      "type": "string"
+    },
+    "tagstatuses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tagstatus.tagstatus",
+      "mappedBy": "profiles"
+    },
+    "uname": {
+      "type": "string"
+    },
+    "perm_createform": {
+      "type": "boolean",
+      "default": false
+    },
+    "perm_edit": {
+      "type": "boolean",
+      "default": false
+    },
+    "perm_status": {
+      "type": "boolean",
+      "default": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "profile"
+    }
+  }
+}
