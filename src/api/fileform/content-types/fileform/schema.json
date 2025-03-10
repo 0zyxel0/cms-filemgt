@@ -46,6 +46,9 @@
         "videos",
         "audios"
       ]
+    },
+    "fcolor": {
+      "type": "string"
     }
   }
 }

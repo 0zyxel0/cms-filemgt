@@ -479,6 +479,7 @@ export interface ApiFileformFileform extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    fcolor: Schema.Attribute.String;
     filestatus: Schema.Attribute.String;
     form_media: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -756,6 +757,7 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     release_date: Schema.Attribute.DateTime;
     remarks: Schema.Attribute.String;
+    statuscolor: Schema.Attribute.String;
     tid: Schema.Attribute.String;
     tstatus: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1240,7 +1242,6 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
-    profile: Schema.Attribute.Relation<'oneToOne', 'api::profile.profile'>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;

@@ -6,7 +6,10 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
+// module.exports = createCoreRouter('api::ticket.ticket');
+
 const defaultRouter = createCoreRouter('api::ticket.ticket');
+// This will parse the custom
 const customRouter = (innerRouter, extraRoutes = []) => {
     let routes;
     return {
@@ -22,8 +25,8 @@ const customRouter = (innerRouter, extraRoutes = []) => {
 const myExtraRoutes = [
     {
         method: 'GET',
-        path: '/ticketfiles/:id',
-        handler: 'ticket.getFileTickets',
+        path: '/ticketinfo/:id',
+        handler: 'ticket.getTicketDetails',
         config: {
             policies: [],
             middlewares: [],

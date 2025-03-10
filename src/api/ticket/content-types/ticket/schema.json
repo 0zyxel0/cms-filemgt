@@ -58,6 +58,9 @@
     },
     "remarks": {
       "type": "string"
+    },
+    "statuscolor": {
+      "type": "string"
     }
   }
 }
