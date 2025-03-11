@@ -5,11 +5,7 @@ module.exports = ({ env }) => ({
       provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
       providerOptions: {
         serviceAccount: env("GCS_SERVICE_ACCOUNT"),
-        bucketName: env('GCS_BUCKET_NAME'),
-        basePath: env('GCS_BASE_PATH'),
-        baseUrl: env('GCS_BASE_URL'),
-        publicFiles: env('GCS_PUBLIC_FILES'),
-        uniform: env('GCS_UNIFORM'),
+        bucketName: env('GOOGLE_STORAGE_BUCKETNAME'),
       },
     },
   },
