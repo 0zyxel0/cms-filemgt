@@ -1,16 +1,16 @@
-// module.exports = () => ({});
 
-module.exports = {
-    // ...
-    upload: {
-      config: {
-        provider: 'local',
-        // sizeLimit: 250 * 1024 * 1024 // 256mb in bytes
-        // providerOptions: {
-          // sizeLimit: 1000000,
-          // sizeLimit: 250 * 1024 * 1024,
-          // path: 'C:\Users\Artesia\Documents\FilemgtImages'
-        // }
-      }
-    }
-  };
+module.exports = ({ env }) => ({
+  upload: {
+    config: {
+      provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
+      providerOptions: {
+        serviceAccount: env("GCS_SERVICE_ACCOUNT"),
+        bucketName: env('GCS_BUCKET_NAME'),
+        basePath: env('GCS_BASE_PATH'),
+        baseUrl: env('GCS_BASE_URL'),
+        publicFiles: env('GCS_PUBLIC_FILES'),
+        uniform: env('GCS_UNIFORM'),
+      },
+    },
+  },
+});
