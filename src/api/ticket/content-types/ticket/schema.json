@@ -57,9 +57,12 @@
       "type": "string"
     },
     "remarks": {
-      "type": "string"
+      "type": "text"
     },
     "statuscolor": {
+      "type": "string"
+    },
+    "uid": {
       "type": "string"
     }
   }

@@ -756,10 +756,11 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
     prevuser: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     release_date: Schema.Attribute.DateTime;
-    remarks: Schema.Attribute.String;
+    remarks: Schema.Attribute.Text;
     statuscolor: Schema.Attribute.String;
     tid: Schema.Attribute.String;
     tstatus: Schema.Attribute.String;
+    uid: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1217,7 +1218,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -1258,6 +1258,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
+    usertype: Schema.Attribute.String;
   };
 }
 

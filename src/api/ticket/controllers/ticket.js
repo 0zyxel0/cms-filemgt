@@ -43,4 +43,32 @@ module.exports = createCoreController("api::ticket.ticket", ({ strapi }) => ({
     }
   },
 
+  getUserTicket: async (ctx) => {
+    const { id: id } = ctx.params;
+    try {
+      let myQuery =
+        `SELECT
+            tickets.id AS id,
+            tickets.document_id AS documentId,
+            tickets.mason,
+            tickets.lodge,
+            tickets.remarks,
+            tickets.created_at AS createdAt,
+            tickets.updated_at AS updatedAt,
+            tickets.tstatus,
+            tickets.doctype,
+            tickets.statuscolor,
+            tickets.nextuser,
+            tickets.prevuser,
+            tickets.tid AS t
+
+          FROM "tickets"
+          WHERE tickets.uid = '${id}'
+          `;
+      let deftoken = await strapi.db.connection.context.raw(myQuery);
+      ctx.body = { data: deftoken.rows };
+    } catch (err) {
+      return err;
+    }
+  },
 }));

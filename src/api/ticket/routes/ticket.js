@@ -32,6 +32,15 @@ const myExtraRoutes = [
             middlewares: [],
         },
     },   
+    {
+        method: 'GET',
+        path: '/ticketinfo/user/:id',
+        handler: 'ticket.getUserTicket',
+        config: {
+            policies: [],
+            middlewares: [],
+        },
+    },     
 ];
 
 module.exports = customRouter(defaultRouter, myExtraRoutes);
