@@ -45,6 +45,10 @@ module.exports = createCoreController("api::ticket.ticket", ({ strapi }) => ({
 
   getUserTicket: async (ctx) => {
     const { id: id } = ctx.params;
+    const { query } = ctx;
+
+    if (!query.filters) query.filters = {}
+    query.filters.id = { '$eq': id }
     try {
       let myQuery =
         `SELECT
