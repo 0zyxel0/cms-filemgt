@@ -731,7 +731,7 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
     singularName: 'ticket';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
