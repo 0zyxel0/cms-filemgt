@@ -737,6 +737,7 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    docremark: Schema.Attribute.Text;
     doctype: Schema.Attribute.String;
     fileforms: Schema.Attribute.Relation<'oneToMany', 'api::fileform.fileform'>;
     initial_date: Schema.Attribute.DateTime;

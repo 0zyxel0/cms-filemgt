@@ -64,6 +64,9 @@
     },
     "uid": {
       "type": "string"
+    },
+    "docremark": {
+      "type": "text"
     }
   }
 }
